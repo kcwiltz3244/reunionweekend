@@ -1,31 +1,29 @@
 *{box-sizing:border-box}
 :root{
   --purple:#4b0082;
-  --deep-purple:#2a004a;
+  --deep-purple:#210033;
+  --darker:#12001f;
   --gold:#ffd700;
-  --cream:#fff8df;
-  --text:#333;
+  --soft-gold:#fff1b8;
 }
 body{
   margin:0;
-  background:#fafafa;
-  color:var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255,215,0,.15), transparent 35%),
+    linear-gradient(180deg, var(--deep-purple), var(--darker));
+  color:white;
   font-family:'Segoe UI', Arial, sans-serif;
 }
 .topbar{
   position:sticky;
   top:0;
   z-index:10;
-  background:var(--purple);
+  background:var(--deep-purple);
   border-bottom:3px solid var(--gold);
-}
-.nav-inner{
-  max-width:1050px;
-  margin:0 auto;
-  padding:12px 16px;
   display:flex;
   justify-content:space-between;
   align-items:center;
+  padding:12px 18px;
 }
 .brand{
   color:var(--gold);
@@ -37,7 +35,7 @@ body{
   text-decoration:none;
   text-transform:uppercase;
   font-size:.85rem;
-  font-weight:800;
+  font-weight:900;
 }
 .hero{
   min-height:430px;
@@ -47,22 +45,22 @@ body{
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:46px 16px;
+  padding:44px 16px;
   border-bottom:5px solid var(--gold);
 }
 .hero-content{
-  max-width:900px;
+  max-width:920px;
 }
 .tiger-logo{
-  width:132px;
+  width:128px;
   max-width:38vw;
   height:auto;
   display:block;
   margin:0 auto 12px;
-  filter:drop-shadow(0 5px 9px rgba(0,0,0,.55));
+  filter:drop-shadow(0 5px 9px rgba(0,0,0,.6));
 }
 .school{
-  color:#fff1bd;
+  color:var(--soft-gold);
   text-transform:uppercase;
   letter-spacing:.12em;
   font-weight:900;
@@ -74,24 +72,24 @@ h1{
   color:var(--gold);
   font-size:clamp(44px,8vw,82px);
   line-height:.95;
-  text-shadow:0 3px 8px rgba(0,0,0,.65);
+  text-shadow:0 3px 8px rgba(0,0,0,.7);
 }
 .hero h2{
   color:white;
   margin:8px 0 0;
   font-size:clamp(24px,4.4vw,43px);
-  text-shadow:0 3px 8px rgba(0,0,0,.65);
+  text-shadow:0 3px 8px rgba(0,0,0,.7);
 }
 .main-button,.button{
   display:inline-block;
-  background:var(--gold);
+  background:linear-gradient(#ffe98f,#d9a514);
   color:var(--deep-purple);
   border:3px solid white;
   border-radius:999px;
   text-decoration:none;
   font-weight:900;
   text-transform:uppercase;
-  box-shadow:0 7px 16px rgba(0,0,0,.28);
+  box-shadow:0 7px 16px rgba(0,0,0,.35);
 }
 .main-button{
   margin-top:22px;
@@ -103,7 +101,7 @@ h1{
   max-width:720px;
   margin:15px auto 0;
   font-size:clamp(15px,2.8vw,20px);
-  font-weight:700;
+  font-weight:800;
   line-height:1.35;
 }
 main{
@@ -112,10 +110,10 @@ main{
   padding:22px 14px;
 }
 .access-card,.photo-card{
-  background:white;
-  border:2px solid #eee;
-  border-radius:16px;
-  box-shadow:0 4px 10px rgba(0,0,0,.08);
+  background:rgba(33,0,51,.94);
+  border:2px solid var(--gold);
+  border-radius:18px;
+  box-shadow:0 6px 16px rgba(0,0,0,.35);
   margin-bottom:22px;
 }
 .access-card{
@@ -124,30 +122,29 @@ main{
   align-items:center;
   gap:20px;
   padding:24px;
-  border-top:5px solid var(--gold);
 }
-.access-text h2,.photo-card h2{
+.access-text h2{
   margin:0 0 10px;
-  color:var(--purple);
+  color:var(--gold);
   font-size:clamp(26px,4vw,38px);
   font-weight:900;
 }
-.access-text p,.photo-card p{
+.access-text p{
+  color:white;
   font-size:clamp(16px,2.4vw,20px);
   line-height:1.45;
   margin:0 0 16px;
 }
 .button{
-  background:var(--purple);
-  color:var(--gold);
-  border-color:var(--gold);
+  background:var(--gold);
+  border-color:white;
   padding:12px 28px;
   font-size:clamp(17px,3vw,24px);
 }
 .qr-card{
   text-align:center;
   flex:0 0 auto;
-  color:var(--deep-purple);
+  color:var(--gold);
   font-weight:900;
   text-decoration:none;
 }
@@ -155,17 +152,15 @@ main{
   width:145px;
   display:block;
   padding:8px;
-  border:3px solid var(--purple);
+  border:3px solid var(--gold);
   border-radius:14px;
   background:white;
   margin:0 auto 6px;
 }
 .photo-card{
-  text-align:center;
-  padding:24px;
+  padding:16px;
 }
 .photo-grid{
-  margin-top:16px;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:10px;
@@ -177,14 +172,16 @@ main{
   display:block;
   border:3px solid var(--gold);
   border-radius:12px;
-  box-shadow:0 3px 8px rgba(0,0,0,.14);
+  box-shadow:0 3px 8px rgba(0,0,0,.28);
 }
 footer{
   text-align:center;
-  background:#1e003c;
+  background:#12001f;
   color:var(--gold);
-  padding:18px;
+  padding:20px;
+  border-top:3px solid var(--gold);
   font-weight:900;
+  letter-spacing:.02em;
 }
 @media(max-width:760px){
   .hero{min-height:370px;padding:34px 12px}
@@ -199,7 +196,7 @@ footer{
     display:inline-block;
     margin-top:16px;
   }
-  .photo-card{padding:18px 12px}
+  .photo-card{padding:10px}
   .photo-grid{
     grid-template-columns:repeat(3,1fr);
     gap:8px;

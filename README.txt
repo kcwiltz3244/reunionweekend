@@ -1,15 +1,10 @@
-REAL PHOTOS ONLY - Final SMSH Reunion Landing Page
+SMSH Purple & Gold Real Photos Only
 
-No AI-generated or AI-enhanced people/photos are used.
-Images are only resized/cropped normally for web layout.
+Changes:
+- Removed "Real Reunion Photos" heading
+- Removed "These are actual uploaded..." wording
+- Photos are no longer links
+- Purple and gold color scheme
+- Only the Reunion Photos buttons and QR code link to QrowdPics
 
-Upload everything in this ZIP to the root of your GitHub repository:
-- index.html
-- style.css
-- tiger.png
-- hero.jpg
-- qr-code.png
-- photos folder
-
-All links open:
-https://qrowdpics.com/smsh50reunion
+Upload all files/folders to GitHub root.
