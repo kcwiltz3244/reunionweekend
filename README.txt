@@ -1,17 +1,13 @@
-Simple SMSH Reunion Landing Page
+SMSH Tiger Style Reunion Site
 
-This version is intentionally simple:
-- actual reunion photo collage
-- one Open Reunion Gallery button
-- QR code
-- no extra busy sections
+Uses actual photos only. No AI-generated pictures.
+Design is more like the reunion site: purple/gold, tiger badge, smaller photo collage, clear gallery button.
 
-Upload these files to the root of the GitHub repository:
+Upload to GitHub root:
 - index.html
 - style.css
-- collage.jpg
 - qr-code.png
 - photo_01.jpg through photo_08.jpg
 
-All links point to:
+All links go to:
 https://qrowdpics.com/smsh50reunion
