@@ -1,199 +1,51 @@
 *{box-sizing:border-box}
-:root{
-  --purple:#210033;
-  --deep:#12001f;
-  --gold:#f3c54b;
-  --cream:#fff7e6;
-  --ink:#230034;
+:root{--purple:#4b0082;--deep:#2a004a;--gold:#ffd700;--cream:#fff8df;--ink:#2a004a}
+body{margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#fafafa;color:#333;overflow-x:hidden}
+a{color:inherit}
+.topbar{position:sticky;top:0;z-index:50;background:var(--purple);border-bottom:2px solid var(--gold)}
+.nav-inner{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:12px 18px}
+.brand{color:var(--gold);font-weight:900;letter-spacing:1px}
+.topbar a{color:white;text-decoration:none;font-weight:800;text-transform:uppercase;font-size:.85rem}
+.hero-header{position:relative;text-align:center;min-height:410px;background:
+  linear-gradient(rgba(30,0,60,.64),rgba(30,0,60,.70)),
+  radial-gradient(circle at 50% 35%,rgba(255,215,0,.20),transparent 35%),
+  repeating-linear-gradient(135deg,#2a004a 0 18px,#3c0069 18px 32px,#1b0033 32px 45px);
+display:flex;align-items:center;justify-content:center;padding:44px 14px;border-bottom:4px solid var(--gold)}
+.header-overlay{max-width:960px}
+.tiger-logo{width:112px;height:auto;display:block;margin:0 auto 12px;filter:drop-shadow(0 5px 8px rgba(0,0,0,.45))}
+.school{text-transform:uppercase;letter-spacing:.12em;color:#fff1bd;font-weight:900;margin:0;font-size:clamp(14px,2vw,20px)}
+h1{color:var(--gold);font-size:clamp(42px,7vw,76px);line-height:.95;margin:8px 0 0;text-shadow:0 3px 8px rgba(0,0,0,.55)}
+.hero-header h2{color:white;font-size:clamp(23px,4vw,40px);margin:8px 0 0;text-shadow:0 3px 8px rgba(0,0,0,.55)}
+.primary-btn,.secondary-btn{display:inline-block;background:var(--purple);color:var(--gold);border:2px solid var(--gold);border-radius:999px;text-decoration:none;font-weight:900;text-transform:uppercase;box-shadow:0 7px 16px rgba(0,0,0,.24);transition:.18s}
+.primary-btn{background:var(--gold);color:var(--deep);border-color:white;font-size:clamp(19px,3.6vw,28px);padding:14px 30px;margin-top:22px}
+.secondary-btn{font-size:clamp(16px,2.8vw,22px);padding:12px 28px}
+.primary-btn:hover,.secondary-btn:hover{transform:scale(1.02)}
+.top-note{color:white;font-weight:800;margin:12px 0 0;font-size:clamp(14px,2.6vw,19px)}
+main{max-width:1060px;margin:0 auto;padding:24px 14px}
+.hero-card,.mosaic-card,.qr-card,.closing{background:white;border:2px solid #eee;border-radius:16px;box-shadow:0 4px 10px rgba(0,0,0,.08);margin-bottom:22px}
+.hero-card{display:grid;grid-template-columns:1.05fr .95fr;gap:0;overflow:hidden;border-top:5px solid var(--gold)}
+.hero-photo img{width:100%;height:310px;object-fit:cover;display:block}
+.welcome{padding:26px;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.welcome h2,.mosaic-card h2,.qr-card h2,.closing h2{color:var(--purple);font-weight:900;margin:0 0 10px;font-size:clamp(25px,3.8vw,36px)}
+.welcome p,.mosaic-card p,.qr-card p{font-size:clamp(16px,2.4vw,20px);line-height:1.45;margin:0 0 16px}
+.mosaic-card{padding:24px;text-align:center}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.mosaic img{width:100%;height:118px;object-fit:cover;border-radius:12px;border:3px solid var(--gold);display:block;box-shadow:0 3px 8px rgba(0,0,0,.14)}
+.qr-card{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px;border-top:5px solid var(--gold)}
+.qr{flex:0 0 auto;text-align:center;background:white;border:3px solid var(--purple);border-radius:14px;padding:10px}
+.qr img{width:140px;display:block}
+.closing{text-align:center;padding:24px;background:var(--deep);border-color:var(--gold)}
+.closing img{width:70px;display:block;margin:0 auto 10px}
+.closing h2{color:var(--gold);margin:0;font-size:clamp(24px,4vw,38px)}
+footer{text-align:center;background:#1e003c;color:var(--gold);padding:18px;font-weight:900}
+@media(max-width:760px){
+ .hero-header{min-height:360px;padding:34px 12px}.tiger-logo{width:88px}
+ main{padding:18px 10px}.hero-card{grid-template-columns:1fr}.hero-photo img{height:210px}
+ .welcome,.mosaic-card,.qr-card{padding:18px}
+ .mosaic{grid-template-columns:repeat(3,1fr);gap:8px}.mosaic img{height:88px;border-width:2px}
+ .qr-card{display:block;text-align:center}.qr{display:inline-block;margin-top:14px}.qr img{width:130px}
 }
-body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(243,197,75,.18), transparent 32%),
-    linear-gradient(180deg,#4b0d70 0%,#210033 52%,#0b0012 100%);
-  color:white;
-}
-.page{
-  max-width:980px;
-  margin:0 auto;
-  padding:14px;
-}
-.hero{
-  text-align:center;
-  background:
-    linear-gradient(135deg,rgba(35,0,52,.94),rgba(80,15,110,.94)),
-    repeating-linear-gradient(45deg, transparent, transparent 14px, rgba(243,197,75,.12) 15px, transparent 16px);
-  border:4px solid var(--gold);
-  border-radius:24px 24px 0 0;
-  padding:24px 16px 28px;
-  box-shadow:0 12px 28px rgba(0,0,0,.38);
-}
-.tiger-badge{
-  width:78px;
-  height:78px;
-  margin:0 auto 10px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:var(--gold);
-  border:4px solid white;
-  font-size:42px;
-  box-shadow:0 0 0 6px rgba(243,197,75,.22);
-}
-.school{
-  margin:0;
-  text-transform:uppercase;
-  letter-spacing:.1em;
-  color:#fff1bd;
-  font-weight:900;
-  font-size:clamp(14px,2.5vw,20px);
-}
-h1{
-  margin:8px 0 0;
-  color:var(--gold);
-  font-size:clamp(44px,9vw,84px);
-  line-height:.95;
-  font-weight:900;
-}
-.hero h2{
-  margin:8px 0 0;
-  color:white;
-  font-size:clamp(25px,5vw,44px);
-}
-.tagline{
-  max-width:720px;
-  margin:14px auto 18px;
-  font-size:clamp(17px,3.2vw,24px);
-  color:#fff7e6;
-  line-height:1.35;
-}
-.main-button,.small-button{
-  display:inline-block;
-  background:linear-gradient(#ffe58a,#e2a914);
-  color:var(--ink);
-  text-decoration:none;
-  font-weight:900;
-  border:3px solid white;
-  border-radius:16px;
-  box-shadow:0 7px 16px rgba(0,0,0,.32);
-}
-.main-button{
-  font-size:clamp(24px,5vw,38px);
-  padding:18px 30px;
-}
-.photo-panel{
-  background:var(--cream);
-  border-left:4px solid var(--gold);
-  border-right:4px solid var(--gold);
-  padding:14px;
-  display:grid;
-  grid-template-columns:1.25fr .75fr;
-  gap:12px;
-}
-.large-photo img,.mini-grid img{
-  width:100%;
-  object-fit:cover;
-  display:block;
-  border:3px solid var(--gold);
-  border-radius:16px;
-}
-.large-photo img{
-  height:360px;
-}
-.mini-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-.mini-grid img{
-  height:175px;
-}
-.action-card{
-  background:var(--cream);
-  color:var(--ink);
-  border:4px solid var(--gold);
-  border-top:0;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  padding:24px;
-}
-.action-card h2{
-  margin:0 0 8px;
-  font-size:clamp(28px,5vw,44px);
-}
-.action-card p{
-  margin:0 0 12px;
-  font-size:clamp(17px,3vw,22px);
-  line-height:1.35;
-  font-weight:700;
-}
-.small-button{
-  border-color:var(--ink);
-  font-size:clamp(19px,3.5vw,28px);
-  padding:14px 22px;
-}
-.qr-wrap{
-  background:white;
-  border:4px solid var(--ink);
-  border-radius:16px;
-  padding:10px;
-  flex:0 0 auto;
-}
-.qr-wrap img{
-  width:165px;
-  display:block;
-}
-footer{
-  text-align:center;
-  background:#14001f;
-  border:4px solid var(--gold);
-  border-top:0;
-  border-radius:0 0 24px 24px;
-  padding:20px 14px;
-}
-.tiger-line{
-  color:var(--gold);
-  font-weight:900;
-  font-size:clamp(25px,5vw,40px);
-}
-.footer-small{
-  margin-top:6px;
-  color:#fff1bd;
-  font-weight:700;
-}
-@media(max-width:740px){
-  .page{padding:8px}
-  .hero{padding:20px 12px 24px}
-  .tiger-badge{width:68px;height:68px;font-size:36px}
-  .photo-panel{
-    grid-template-columns:1fr;
-    padding:10px;
-  }
-  .large-photo img{
-    height:245px;
-  }
-  .mini-grid img{
-    height:135px;
-  }
-  .action-card{
-    display:block;
-    text-align:center;
-    padding:20px 14px;
-  }
-  .qr-wrap{
-    display:inline-block;
-    margin-top:14px;
-  }
-  .qr-wrap img{
-    width:145px;
-  }
-}
-@media(max-width:420px){
-  .large-photo img{height:215px}
-  .mini-grid img{height:120px}
-  .main-button{width:100%;padding-left:10px;padding-right:10px}
+@media(max-width:430px){
+ .mosaic{grid-template-columns:repeat(2,1fr)}.mosaic img{height:100px}
+ .primary-btn,.secondary-btn{width:100%;padding-left:10px;padding-right:10px}
 }
