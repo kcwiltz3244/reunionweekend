@@ -1,1 +1,1 @@
-This is the corrected clean version. It uses only actual reunion photos supplied by the user. Upload index.html, style.css, and the images folder to the root of the GitHub repo. All links point to https://qrowdpics.com/smsh50reunion.
+Uses only actual uploaded photos. Upload index.html, style.css, and images folder. All links go to QrowdPics.
