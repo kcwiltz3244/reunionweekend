@@ -21,7 +21,7 @@ body{
   background:var(--deep-purple);
   border-bottom:3px solid var(--gold);
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items:center;
   padding:12px 18px;
 }
@@ -118,7 +118,7 @@ main{
 }
 .access-card{
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items:center;
   gap:20px;
   padding:24px;
@@ -218,4 +218,12 @@ footer{
   .photo-grid img{
     height:96px;
   }
+}
+
+.date-line{
+  color:var(--gold);
+  font-size:clamp(22px,4vw,38px);
+  font-weight:900;
+  margin:16px 0 0;
+  text-shadow:0 3px 8px rgba(0,0,0,.7);
 }
