@@ -1,17 +1,15 @@
-Professional SMSH QrowdPics landing page
+REAL PHOTOS ONLY - Final SMSH Reunion Landing Page
 
-Uses:
-- Your uploaded tiger.png
-- Actual reunion photos selected from the 185-photo ZIP
-- Purple and gold styling similar to the original reunion website
+No AI-generated or AI-enhanced people/photos are used.
+Images are only resized/cropped normally for web layout.
 
-Upload all extracted files to the root of your GitHub repository:
-index.html
-style.css
-tiger.png
-hero.jpg
-qr-code.png
-photos folder
+Upload everything in this ZIP to the root of your GitHub repository:
+- index.html
+- style.css
+- tiger.png
+- hero.jpg
+- qr-code.png
+- photos folder
 
-All buttons/photos/QR open:
+All links open:
 https://qrowdpics.com/smsh50reunion
